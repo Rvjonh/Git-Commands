@@ -37,6 +37,7 @@
 | `git add -A` | Add all new and changed files to the staging area |
 | `git commit -m "[commit message]"` | Commit changes |
 | `git rm -r [--cache] [--force] [file-name.txt]` | Remove a file (or folder), Deleting the file from the folder and the repository |
+| `git clean [-i│-n]` | Cleans the directory, deletes untracked files |
 
 ### To consider in Commits
 
@@ -66,6 +67,7 @@
 | `git branch [branch name]` | Create a new branch "¡Give a proper name!" |
 | `git branch -d [branch name]` | Delete a branch |
 | `git branch -m [old branch name] [new branch name]` | Rename a local branch |
+| `git branch [--merged│--no-merged]` | Returns branches which has been (--merged) or (--no-merged) in the actual branch |
 | `git push origin --delete [branch name]` | Delete a remote branch |
 | `git checkout -b [branch name]` | Create a new branch and switch to it "¡Give a proper name!" |
 | `git checkout -b [branch name] origin/[branch name]` | Clone a remote branch and switch to it |
@@ -75,6 +77,7 @@
 | `git checkout -- [file-name.txt]` | Discard changes to a file |
 | `git merge [branch name]` | Merge a branch into the active branch |
 | `git merge [source branch] [target branch]` | Merge a branch into a target branch |
+| `git merge --abort` | Allows you to cancel merging |
 | **`git rebase [other_branch_name]`** | Pass commits from other branch to actual branch `really conflictly` |
 | `git stash` | Stash changes in a working directory |
 | `git stash clear` | Remove all stashed entries |
@@ -100,7 +103,11 @@
 | `git log` | View changes |
 | `git log --summary` | View changes (detailed) |
 | `git log --oneline` | View changes (briefly) |
+| `git reflog` | Manage reflog information, shows data about the commits tree  |
 | `git diff [source branch] [target branch]` | Preview changes before merging |
+| `git diff-tree -r [commit id]` | Check which files have been changed or added in the commit |
+| `git ls-tree` | Returns a tree of the folder with many options |
+| `git bisect` | Do a binary search in commits which has cause any error |
 
 ---
 ---
